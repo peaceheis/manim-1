@@ -136,6 +136,23 @@ class Code(VGroup):
                 rendered_code = Code(code=code, tab_width=4, background="window",
                                     language="Python", font="Monospace")
                 self.add(rendered_code)
+       
+    .. manim:: CodeExample 
+    :save_last_frame:
+    
+    class CodeExample(Scene):
+        def construct(self):
+            code_string = """from manim import Code
+    \n        class Code_Example(Scene): 
+    \n            def construct(self): 
+    \n                self.add(Code(code="Code String" 
+    \n\t\t\t                          language="Programming Language" 
+    \n\t\t\t                          style="Code style name"  
+    \n\t\t\t                          insert_line_no="Boolean for code line numbers" 
+    \n\t\t\t                          file_path="Optional path for code file" 
+    \n\t\t\t                          line_no_from="Int for first number in the line count"))"""
+            self.add(Code(code=code_string, language="python"))
+      
 
     """
 
